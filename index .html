@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Off Officiel</title>
+    <link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="mobile-block" style="display:none;">
+        <div class="mobile-block-content">
+            <h2>🚫 Accès refusé sur mobile</h2>
+            <p>Ce site est optimisé uniquement pour ordinateur.<br>
+                Mais tu peux tenter ta chance au mini-jeu pour accéder au site !</p>
+            <div id="game-area">
+                <p>Tape sur le cercle vert 3 fois pour débloquer le site :</p>
+                <div id="circle-game"
+                    style="width:60px;height:60px;background:#4CAF50;border-radius:50%;margin:20px auto;cursor:pointer;box-shadow:0 2px 8px #0003;">
+                </div>
+                <p id="game-score" style="font-weight:bold;">0 / 3</p>
+                <p id="game-success" style="color:#4CAF50;font-weight:bold;display:none;">Bravo ! Accès débloqué 🎉</p>
+            </div>
+        </div>
+    </div>
+    <!-- ...mobile-block et le reste... -->
+    <button id="floating-btn" title="Menu" style="display:none;">
+    <span>☰</span>
+</button>
+<div id="floating-menu" class="floating-menu">
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="contact.html" target="_blank">Contact</a></li>
+    </ul>
+</div>
+    <header>
+        <div class="navbar">
+            <h1 class="logo">OFF</h1>
+            <button class="burger" id="burger-menu" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#work">Work</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="contact-button">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h2>OFF<br>(Specialiser dans le domain de l'informatique)</h2>
+                <p>OFF une marque depose de @hiver_mav</p>
+                <a href="#services" class="cta-button">View Services</a>
+            </div>
+        </section>
+
+        <!-- Vague de transition
+        <div class="wave-transition">
+            <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#fff" fill-opacity="1"
+                    d="M0,32L48,37.3C96,43,192,53,288,69.3C384,85,480,107,576,117.3C672,128,768,128,864,117.3C960,107,1056,85,1152,74.7C1248,64,1344,64,1392,64L1440,64L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z">
+                </path>
+            </svg>
+        </div> -->
+
+    </main>
+    <!-- Ici commence la section footer -->
+    <section>
+        <div class="footer">
+            <div class="a-propos" id="about">
+                <h4>A Propos De Nous</h4>
+                <P>Nous aidons chacun à progresser en informatique grâce à des ressources, des conseils et une
+                    communauté solidaire. Rejoignez-nous pour apprendre et avancer ensemble !</P>
+            </div>
+
+            <div class="n-services" id="services">
+                <h4>Nos Services</h4>
+                <ul>
+                    <li>Développement de pages web modernes</li>
+                    <li>Création de portfolios professionnels</li>
+                    <li>Conseils en informatique et numérique</li>
+                    <li>Assistance à l'apprentissage des outils digitaux</li>
+                    <li>Support technique personnalisé</li>
+                </ul>
+            </div>
+
+            <div class="r-social">
+                <h4>Réseaux Sociaux</h4>
+                <ul class="social-links">
+                    <li>
+                        <a href="https://wa.me/242067451820" target="_blank" title="WhatsApp">
+                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                alt="WhatsApp" style="width:22px;vertical-align:middle;margin-right:8px;">
+                            +242 06 74 51 820
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/hiver_mav" target="_blank" title="Instagram">
+                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
+                                alt="Instagram" style="width:22px;vertical-align:middle;margin-right:8px;">
+                            @hiver_mav
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com/@hiver_mav" target="_blank" title="YouTube">
+                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg"
+                                alt="YouTube" style="width:22px;vertical-align:middle;margin-right:8px;">
+                            hiver_mav
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="licenses">
+            <p>&copy; 2025 Tous droits réservés. <br> Licenses gratuites par hiver_mav</p>
+        </div>
+    </section>
+    <section>
+        <div class="language-switcher">
+            <label for="lang-select">🌐 Langue :</label>
+            <select id="lang-select">
+                <option value="fr">Français</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="zh">中文</option>
+            </select>
+        </div>
+    </section>
+    <script>
+        // Traductions de base
+        const translations = {
+            fr: {
+                heroTitle: "OFF<br>(Spécialisé dans le domaine de l'informatique)",
+                heroDesc: "OFF une marque déposée de @hiver_mav",
+                cta: "Voir les services",
+                aboutTitle: "A Propos De Nous",
+                aboutText: "Nous aidons chacun à progresser en informatique grâce à des ressources, des conseils et une communauté solidaire. Rejoignez-nous pour apprendre et avancer ensemble !",
+                servicesTitle: "Nos Services",
+                services: [
+                    "Développement de pages web modernes",
+                    "Création de portfolios professionnels",
+                    "Conseils en informatique et numérique",
+                    "Assistance à l'apprentissage des outils digitaux",
+                    "Support technique personnalisé"
+                ],
+                socialTitle: "Réseaux Sociaux"
+            },
+            en: {
+                heroTitle: "OFF<br>(Specialized in IT field)",
+                heroDesc: "OFF is a registered brand by @hiver_mav",
+                cta: "View Services",
+                aboutTitle: "About Us",
+                aboutText: "We help everyone progress in IT with resources, advice, and a supportive community. Join us to learn and move forward together!",
+                servicesTitle: "Our Services",
+                services: [
+                    "Modern web page development",
+                    "Professional portfolio creation",
+                    "IT and digital consulting",
+                    "Assistance with digital tools learning",
+                    "Personalized technical support"
+                ],
+                socialTitle: "Social Networks"
+            },
+            es: {
+                heroTitle: "OFF<br>(Especializado en informática)",
+                heroDesc: "OFF es una marca registrada de @hiver_mav",
+                cta: "Ver servicios",
+                aboutTitle: "Sobre Nosotros",
+                aboutText: "Ayudamos a todos a progresar en informática con recursos, consejos y una comunidad solidaria. ¡Únete para aprender y avanzar juntos!",
+                servicesTitle: "Nuestros Servicios",
+                services: [
+                    "Desarrollo de páginas web modernas",
+                    "Creación de portafolios profesionales",
+                    "Asesoría en informática y digital",
+                    "Asistencia en el aprendizaje de herramientas digitales",
+                    "Soporte técnico personalizado"
+                ],
+                socialTitle: "Redes Sociales"
+            },
+            zh: {
+                heroTitle: "OFF<br>（专注于信息技术领域）",
+                heroDesc: "OFF 是 @hiver_mav 的注册品牌",
+                cta: "查看服务",
+                aboutTitle: "关于我们",
+                aboutText: "我们通过资源、建议和互助社区，帮助每个人提升信息技术能力。加入我们，一起学习和进步！",
+                servicesTitle: "我们的服务",
+                services: [
+                    "现代网页开发",
+                    "专业作品集创建",
+                    "信息技术与数字咨询",
+                    "数字工具学习协助",
+                    "个性化技术支持"
+                ],
+                socialTitle: "社交网络"
+            }
+        };
+
+        function setLang(lang) {
+            const t = translations[lang];
+            // Hero section
+            document.querySelector('.hero-content h2').innerHTML = t.heroTitle;
+            document.querySelector('.hero-content p').textContent = t.heroDesc;
+            document.querySelector('.cta-button').textContent = t.cta;
+            // About
+            document.querySelector('.a-propos h4').textContent = t.aboutTitle;
+            document.querySelector('.a-propos p').textContent = t.aboutText;
+            // Services
+            document.querySelector('.n-services h4').textContent = t.servicesTitle;
+            const ul = document.querySelector('.n-services ul');
+            ul.innerHTML = t.services.map(item => `<li>${item}</li>`).join('');
+            // Social
+            document.querySelector('.r-social h4').textContent = t.socialTitle;
+        }
+
+        document.getElementById('lang-select').addEventListener('change', function () {
+            setLang(this.value);
+        });
+    </script>
+    <script>
+        // Fonction pour détecter la première visite
+        function detectFirstVisit() {
+            if (!localStorage.getItem('visited')) {
+                // Première visite
+                localStorage.setItem('visited', 'yes');
+                console.log("Bienvenue, c'est votre première visite !");
+                // Tu peux ici afficher un message ou lancer une animation
+            } else {
+                console.log("Bienvenue à nouveau !");
+            }
+        }
+
+        // Appel de la fonction au chargement de la page
+        detectFirstVisit();
+    </script>
+    <script>
+        // Menu burger
+        const burger = document.getElementById('burger-menu');
+        const navLinks = document.querySelector('.nav-links');
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            burger.classList.toggle('active');
+        });
+        // Ferme le menu au clic sur un lien
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                burger.classList.remove('active');
+            });
+        });
+    </script>
+    <script>
+        function isMobile() {
+            // Bloque si largeur ou hauteur <= 700px (portrait ou paysage)
+            return window.innerWidth <= 700 || window.innerHeight <= 700 || window.matchMedia("(max-width: 700px), (max-height: 700px)").matches;
+        }
+        function showMobileBlock() {
+            document.getElementById('mobile-block').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function hideMobileBlock() {
+            document.getElementById('mobile-block').style.display = 'none';
+            document.body.style.overflow = '';
+        }
+        // Affiche le bloc si mobile au chargement
+        if (isMobile()) {
+            showMobileBlock();
+        }
+        // Vérifie au redimensionnement ET à la rotation
+        window.addEventListener('resize', function () {
+            if (isMobile()) {
+                showMobileBlock();
+            } else {
+                hideMobileBlock();
+            }
+        });
+        window.addEventListener('orientationchange', function () {
+            if (isMobile()) {
+                showMobileBlock();
+            } else {
+                hideMobileBlock();
+            }
+        });
+
+    </script>
+    <script>
+        // Remet le jeu à zéro à chaque chargement
+        let score = 0;
+        const circle = document.getElementById('circle-game');
+        const scoreText = document.getElementById('game-score');
+        const successText = document.getElementById('game-success');
+        if (scoreText) scoreText.textContent = "0 / 3";
+        if (successText) successText.style.display = "none";
+        if (circle) {
+            circle.addEventListener('click', function () {
+                score++;
+                scoreText.textContent = score + " / 3";
+                if (score >= 3) {
+                    successText.style.display = 'block';
+                    setTimeout(() => {
+                        document.getElementById('mobile-block').style.display = 'none';
+                        document.body.style.overflow = '';
+                        document.body.classList.add('mobile-unlocked');
+                        document.getElementById('floating-btn').style.display = 'flex';
+                    }, 1000);
+                }
+            });
+        }
+    </script>
+    <script>
+    // Floating menu mobile
+    const floatingBtn = document.getElementById('floating-btn');
+    const floatingMenu = document.getElementById('floating-menu');
+    // Ouvre/ferme le menu au clic sur le bouton
+    floatingBtn.addEventListener('click', () => {
+        floatingMenu.classList.toggle('open');
+    });
+    // Ferme le menu au clic sur un lien
+    document.querySelectorAll('#floating-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            floatingMenu.classList.remove('open');
+        });
+    });
+    // Ferme le menu si on clique ailleurs
+    document.addEventListener('click', (e) => {
+        if (!floatingBtn.contains(e.target) && !floatingMenu.contains(e.target)) {
+            floatingMenu.classList.remove('open');
+        }
+    });
+</script>
+    <script>
+        // Affiche le bouton flottant si mobile déverrouillé
+        if (document.body.classList.contains('mobile-unlocked')) {
+            document.getElementById('floating-btn').style.display = 'flex';
+        }
+    </script>
+</body>
+
+</html>

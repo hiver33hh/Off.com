@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - OFF</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .contact-container {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            padding: 40px 32px 32px 32px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            animation: fadeInUp 1s;
+        }
+
+        .contact-container h2 {
+            color: #4CAF50;
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
+
+        .contact-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .contact-container input,
+        .contact-container textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border 0.2s;
+        }
+
+        .contact-container input:focus,
+        .contact-container textarea:focus {
+            border: 1.5px solid #4CAF50;
+            outline: none;
+        }
+
+        .contact-container button {
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .contact-container button:hover {
+            background: #388e3c;
+            transform: scale(1.04);
+        }
+
+        .social-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .social-contact a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #162415;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+
+        .social-contact a:hover {
+            color: #4CAF50;
+        }
+
+        .social-contact img {
+            width: 26px;
+            height: 26px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .contact-container {
+                padding: 18px 5vw 18px 5vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="language-switcher">
+        <label for="lang-select">🌐 Langue :</label>
+        <select id="lang-select">
+            <option value="fr">Français</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="zh">中文</option>
+        </select>
+    </div>
+
+    <div class="contact-container">
+        <h2>Contactez-nous</h2>
+        <form>
+            <input type="text" placeholder="Votre nom" required>
+            <input type="email" placeholder="Votre email" required>
+            <textarea rows="4" placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+        <div class="social-contact">
+            <a href="https://wa.me/242067451820" target="_blank" title="WhatsApp">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
+                +242 06 74 51 820
+            </a>
+            <a href="https://instagram.com/hiver_mav" target="_blank" title="Instagram">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+                @hiver_mav
+            </a>
+            <a href="https://youtube.com/@hiver_mav" target="_blank" title="YouTube">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube">
+                hiver_mav
+            </a>
+        </div>
+    </div>
+    <!-- Ajoute ce script juste avant </body> -->
+    <script>
+        document.querySelector('.contact-container form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            window.location.href = "index (1).html";
+        });
+    </script>
+    <script>
+        const translations = {
+            fr: {
+                title: "Contactez-nous",
+                name: "Votre nom",
+                email: "Votre email",
+                message: "Votre message",
+                send: "Envoyer",
+                whatsapp: "+242 06 74 51 820",
+                instagram: "@hiver_mav",
+                youtube: "hiver_mav"
+            },
+            en: {
+                title: "Contact Us",
+                name: "Your name",
+                email: "Your email",
+                message: "Your message",
+                send: "Send",
+                whatsapp: "+242 06 74 51 820",
+                instagram: "@hiver_mav",
+                youtube: "hiver_mav"
+            },
+            es: {
+                title: "Contáctanos",
+                name: "Tu nombre",
+                email: "Tu correo",
+                message: "Tu mensaje",
+                send: "Enviar",
+                whatsapp: "+242 06 74 51 820",
+                instagram: "@hiver_mav",
+                youtube: "hiver_mav"
+            },
+            zh: {
+                title: "联系我们",
+                name: "您的姓名",
+                email: "您的邮箱",
+                message: "您的留言",
+                send: "发送",
+                whatsapp: "+242 06 74 51 820",
+                instagram: "@hiver_mav",
+                youtube: "hiver_mav"
+            }
+        };
+
+        function setLang(lang) {
+            const t = translations[lang];
+            document.querySelector('.contact-container h2').textContent = t.title;
+            const inputs = document.querySelectorAll('.contact-container input');
+            if (inputs[0]) inputs[0].placeholder = t.name;
+            if (inputs[1]) inputs[1].placeholder = t.email;
+            document.querySelector('.contact-container textarea').placeholder = t.message;
+            document.querySelector('.contact-container button').textContent = t.send;
+            // Les réseaux sociaux ne changent pas ici, mais tu peux adapter si besoin
+        }
+
+        document.getElementById('lang-select').addEventListener('change', function () {
+            setLang(this.value);
+        });
+    </script>
+    <script>
+        document.getElementById('lang-select').value = 'fr'; // Définit la langue par défaut
+        setLang('fr'); // Appelle la fonction pour initialiser avec la langue par défaut
+    </script>
+</body>
+
+</html>
