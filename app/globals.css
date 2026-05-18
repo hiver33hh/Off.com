@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Poppins', sans-serif;
+  --font-display: 'Pacifico', cursive;
+  
+  --color-background: #f9f9f9;
+  --color-foreground: #162415;
+  --color-primary: #4CAF50;
+  --color-primary-hover: #388e3c;
+  --color-secondary: #162415;
+  --color-muted: #e0e0e0;
+  --color-accent: #b2ffb2;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-foreground);
+    background-color: var(--color-background);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-8 py-3 font-semibold transition-all duration-300;
+  }
+
+  .btn-primary:hover {
+    @apply bg-primary-hover scale-105 -translate-y-1;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border-2 border-primary text-white px-5 py-2.5 rounded font-bold transition-all duration-300;
+  }
+
+  .btn-outline:hover {
+    @apply bg-primary text-white;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s forwards;
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.8s;
+}
